@@ -52,7 +52,7 @@ public class AspasTest {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 
         String file = "part-00001-2ba5f3c2-db74-457c-b260-f13341ea1768.c000.snappy.parquet";
-        String source = "/Users/paulo.moreira/Downloads/"+file;
+        String source = "/Users/arthur.edson/Downloads/"+file;
         String code = "T84834910";
         Dataset<Row> df = spark.read().parquet(source).select("affiliation_code", "tags"); //.where("affiliation_code='T84834910'");
         df = df.where("tags LIKE '%soy abundante%'");
